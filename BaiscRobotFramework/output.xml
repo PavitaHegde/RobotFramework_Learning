@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200908 17:29:51.520" generator="Robot 3.2.2 (Python 2.7.18 on win32)">
+<suite source="F:\Mitesh Traing Doc\BaiscRobotFramework\test" id="s1" name="Test">
+<suite source="F:\Mitesh Traing Doc\BaiscRobotFramework\test\TestSuitSelenium.robot" id="s1-s1" name="TestSuitSelenium">
+<test id="s1-s1-t1" name="MyFirstCase">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Hello World...</arg>
+</arguments>
+<status status="PASS" endtime="20200908 17:29:51.951" starttime="20200908 17:29:51.950"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20200908 17:29:51.952" critical="yes" starttime="20200908 17:29:51.948"></status>
+</test>
+<test id="s1-s1-t2" name="SeleniumCase">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https:\\google.com</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200908 17:29:51.964" level="INFO">Opening browser 'chrome' to base url 'https:\google.com'.</msg>
+<status status="PASS" endtime="20200908 17:29:58.548" starttime="20200908 17:29:51.963"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" endtime="20200908 17:29:58.552" starttime="20200908 17:29:58.550"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20200908 17:30:00.677" starttime="20200908 17:29:58.553"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=q</arg>
+<arg>Automation Master</arg>
+</arguments>
+<msg timestamp="20200908 17:30:00.678" level="INFO">Typing text 'Automation Master' into text field 'name=q'.</msg>
+<status status="PASS" endtime="20200908 17:30:00.899" starttime="20200908 17:30:00.678"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200908 17:30:02.900" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20200908 17:30:02.900" starttime="20200908 17:30:00.900"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>name=q</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20200908 17:30:02.904" level="INFO">Sending key(s) (u'ENTER',) to name=q element.</msg>
+<msg timestamp="20200908 17:30:03.207" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20200908 17:30:03.208" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" endtime="20200908 17:30:07.062" starttime="20200908 17:30:02.901"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20200908 17:30:09.313" starttime="20200908 17:30:07.063"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20200908 17:30:09.315" critical="yes" starttime="20200908 17:29:51.960"></status>
+</test>
+<status status="PASS" endtime="20200908 17:30:09.328" starttime="20200908 17:29:51.577"></status>
+</suite>
+<status status="PASS" endtime="20200908 17:30:09.348" starttime="20200908 17:29:51.524"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="2">Smoke</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Test" pass="2">Test</stat>
+<stat fail="0" id="s1-s1" name="TestSuitSelenium" pass="2">Test.TestSuitSelenium</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
