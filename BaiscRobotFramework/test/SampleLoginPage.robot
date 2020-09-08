@@ -15,8 +15,8 @@ ${URL}    https://dev.intempconnect.com/
     
 *** Keywords ***
 LoginKeyword
-     Input Text    xpath://input[@type='text']    &{cred}[K1]    # @{Credentilas}[0]
-    Input Text    xpath://input[@type='password']    &{cred}[K2]    # @{Credentilas}[1]
+     Input Text    xpath://input[@type='text']    ${cred}[K1]    # @{Credentilas}[0]
+    Input Text    xpath://input[@type='password']    ${cred}[K2]    # @{Credentilas}[1]
     Click Element   xpath://button[@role='button']/span
    
   
