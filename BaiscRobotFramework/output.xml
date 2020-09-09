@@ -1,93 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20200908 17:29:51.520" generator="Robot 3.2.2 (Python 2.7.18 on win32)">
-<suite source="F:\Mitesh Traing Doc\BaiscRobotFramework\test" id="s1" name="Test">
-<suite source="F:\Mitesh Traing Doc\BaiscRobotFramework\test\TestSuitSelenium.robot" id="s1-s1" name="TestSuitSelenium">
-<test id="s1-s1-t1" name="MyFirstCase">
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
+<robot rpa="false" generated="20200909 18:07:51.741" generator="Robot 3.2.2 (Python 2.7.18 on win32)">
+<suite source="C:\Users\DELL\git\RobotFramework_Learning\BaiscRobotFramework" id="s1" name="BaiscRobotFramework">
+<suite source="C:\Users\DELL\git\RobotFramework_Learning\BaiscRobotFramework\test" id="s1-s1" name="Test">
+<suite source="C:\Users\DELL\git\RobotFramework_Learning\BaiscRobotFramework\test\SampleLoginPage.robot" id="s1-s1-s1" name="SampleLoginPage">
+<test id="s1-s1-s1-t1" name="LoginPageTestCase">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
 <arguments>
-<arg>Hello World...</arg>
+<arg>Test Started</arg>
 </arguments>
-<status status="PASS" endtime="20200908 17:29:51.951" starttime="20200908 17:29:51.950"></status>
+<msg timestamp="20200909 18:07:52.426" level="INFO">Test Started</msg>
+<status status="PASS" endtime="20200909 18:07:52.427" starttime="20200909 18:07:52.424"></status>
 </kw>
-<tags>
-<tag>Smoke</tag>
-</tags>
-<status status="PASS" endtime="20200908 17:29:51.952" critical="yes" starttime="20200908 17:29:51.948"></status>
-</test>
-<test id="s1-s1-t2" name="SeleniumCase">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
-<arg>https:\\google.com</arg>
+<arg>${URL}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20200908 17:29:51.964" level="INFO">Opening browser 'chrome' to base url 'https:\google.com'.</msg>
-<status status="PASS" endtime="20200908 17:29:58.548" starttime="20200908 17:29:51.963"></status>
+<msg timestamp="20200909 18:07:52.429" level="INFO">Opening browser 'chrome' to base url 'https://dev.intempconnect.com/'.</msg>
+<status status="PASS" endtime="20200909 18:08:07.063" starttime="20200909 18:07:52.428"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20200909 18:08:09.209" starttime="20200909 18:08:07.063"></status>
 </kw>
 <kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
-<arg>5</arg>
+<arg>2</arg>
 </arguments>
-<status status="PASS" endtime="20200908 17:29:58.552" starttime="20200908 17:29:58.550"></status>
+<status status="PASS" endtime="20200909 18:08:09.214" starttime="20200909 18:08:09.210"></status>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20200908 17:30:00.677" starttime="20200908 17:29:58.553"></status>
+<kw name="Take Screenshot" library="Screenshot">
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<msg timestamp="20200909 18:08:09.347" html="yes" level="INFO">&lt;a href="screenshot_7.jpg"&gt;&lt;img src="screenshot_7.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200909 18:08:09.347" starttime="20200909 18:08:09.215"></status>
+</kw>
+<kw name="LoginKeyword">
+<kw name="Input UsernameIntemp">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@type='text']</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200909 18:08:09.355" level="INFO">Typing text 'sqa.onset@gmail.com' into text field 'xpath://input[@type='text']'.</msg>
+<status status="PASS" endtime="20200909 18:08:09.548" starttime="20200909 18:08:09.352"></status>
+</kw>
+<status status="PASS" endtime="20200909 18:08:09.549" starttime="20200909 18:08:09.349"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>name=q</arg>
-<arg>Automation Master</arg>
+<arg>xpath://input[@type='password']</arg>
+<arg>${cred}[K2]</arg>
 </arguments>
-<msg timestamp="20200908 17:30:00.678" level="INFO">Typing text 'Automation Master' into text field 'name=q'.</msg>
-<status status="PASS" endtime="20200908 17:30:00.899" starttime="20200908 17:30:00.678"></status>
+<msg timestamp="20200909 18:08:09.552" level="INFO">Typing text 'Sqaonset@123' into text field 'xpath://input[@type='password']'.</msg>
+<status status="PASS" endtime="20200909 18:08:09.685" starttime="20200909 18:08:09.550"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>2</arg>
+<arg>xpath://button[@role='button']/span</arg>
 </arguments>
-<msg timestamp="20200908 17:30:02.900" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" endtime="20200908 17:30:02.900" starttime="20200908 17:30:00.900"></status>
+<msg timestamp="20200909 18:08:09.687" level="INFO">Clicking element 'xpath://button[@role='button']/span'.</msg>
+<status status="PASS" endtime="20200909 18:08:11.363" starttime="20200909 18:08:09.686"></status>
 </kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" endtime="20200909 18:08:11.364" starttime="20200909 18:08:09.348"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>name=q</arg>
-<arg>ENTER</arg>
+<arg>xpath://div[@class='account-value']</arg>
 </arguments>
-<msg timestamp="20200908 17:30:02.904" level="INFO">Sending key(s) (u'ENTER',) to name=q element.</msg>
-<msg timestamp="20200908 17:30:03.207" level="INFO">Pressing special key ENTER to element.</msg>
-<msg timestamp="20200908 17:30:03.208" level="INFO">Releasing special key ENTER.</msg>
-<status status="PASS" endtime="20200908 17:30:07.062" starttime="20200908 17:30:02.901"></status>
+<msg timestamp="20200909 18:08:11.367" level="INFO">Clicking element 'xpath://div[@class='account-value']'.</msg>
+<status status="PASS" endtime="20200909 18:08:11.488" starttime="20200909 18:08:11.364"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>xpath://select[@class='valid-input account ellipsis']</arg>
+<arg>Test Account</arg>
+</arguments>
+<msg timestamp="20200909 18:08:11.490" level="INFO">Selecting options from selection list 'xpath://select[@class='valid-input account ellipsis']' by label Test Account.</msg>
+<status status="PASS" endtime="20200909 18:08:11.629" starttime="20200909 18:08:11.489"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@class='header-log-out-submit']/a</arg>
+</arguments>
+<msg timestamp="20200909 18:08:11.632" level="INFO">Clicking element 'xpath://div[@class='header-log-out-submit']/a'.</msg>
+<status status="PASS" endtime="20200909 18:08:12.367" starttime="20200909 18:08:11.630"></status>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<msg timestamp="20200909 18:08:12.465" html="yes" level="INFO">&lt;a href="screenshot_8.jpg"&gt;&lt;img src="screenshot_8.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200909 18:08:12.467" starttime="20200909 18:08:12.367"></status>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20200908 17:30:09.313" starttime="20200908 17:30:07.063"></status>
+<status status="PASS" endtime="20200909 18:08:14.690" starttime="20200909 18:08:12.468"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Test Completed</arg>
+</arguments>
+<msg timestamp="20200909 18:08:14.692" level="INFO">Test Completed</msg>
+<status status="PASS" endtime="20200909 18:08:14.692" starttime="20200909 18:08:14.691"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Test ran on %{os} by user %{USERNAME}</arg>
+</arguments>
+<msg timestamp="20200909 18:08:14.693" level="INFO">Test ran on Windows_NT by user DELL</msg>
+<status status="PASS" endtime="20200909 18:08:14.694" starttime="20200909 18:08:14.693"></status>
 </kw>
 <tags>
-<tag>Smoke</tag>
+<tag>Sanity</tag>
 </tags>
-<status status="PASS" endtime="20200908 17:30:09.315" critical="yes" starttime="20200908 17:29:51.960"></status>
+<status status="PASS" endtime="20200909 18:08:14.694" critical="yes" starttime="20200909 18:07:52.422"></status>
 </test>
-<status status="PASS" endtime="20200908 17:30:09.328" starttime="20200908 17:29:51.577"></status>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20200909 18:08:14.697" starttime="20200909 18:08:14.697"></status>
+</kw>
+<status status="PASS" endtime="20200909 18:08:14.698" starttime="20200909 18:07:51.848"></status>
 </suite>
-<status status="PASS" endtime="20200908 17:30:09.348" starttime="20200908 17:29:51.524"></status>
+<status status="PASS" endtime="20200909 18:08:14.703" starttime="20200909 18:07:51.841"></status>
+</suite>
+<status status="PASS" endtime="20200909 18:08:14.707" starttime="20200909 18:07:51.798"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="2">Critical Tests</stat>
-<stat fail="0" pass="2">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
-<stat fail="0" pass="2">Smoke</stat>
+<stat fail="0" pass="1">Sanity</stat>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Test" pass="2">Test</stat>
-<stat fail="0" id="s1-s1" name="TestSuitSelenium" pass="2">Test.TestSuitSelenium</stat>
+<stat fail="0" id="s1" name="BaiscRobotFramework" pass="1">BaiscRobotFramework</stat>
+<stat fail="0" id="s1-s1" name="Test" pass="1">BaiscRobotFramework.Test</stat>
+<stat fail="0" id="s1-s1-s1" name="SampleLoginPage" pass="1">BaiscRobotFramework.Test.SampleLoginPage</stat>
 </suite>
 </statistics>
 <errors>
